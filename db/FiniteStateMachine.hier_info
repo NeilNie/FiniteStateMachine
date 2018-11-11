@@ -1,0 +1,54 @@
+|FiniteStateMachine
+KEY => ~NO_FANOUT~
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= clock_1hz:clock.out
+CLOCK_50 => CLOCK_50.IN1
+
+
+|FiniteStateMachine|clock_1hz:clock
+clk => out_1hz.CLK
+clk => count_reg[0].CLK
+clk => count_reg[1].CLK
+clk => count_reg[2].CLK
+clk => count_reg[3].CLK
+clk => count_reg[4].CLK
+clk => count_reg[5].CLK
+clk => count_reg[6].CLK
+clk => count_reg[7].CLK
+clk => count_reg[8].CLK
+clk => count_reg[9].CLK
+clk => count_reg[10].CLK
+clk => count_reg[11].CLK
+clk => count_reg[12].CLK
+clk => count_reg[13].CLK
+clk => count_reg[14].CLK
+clk => count_reg[15].CLK
+clk => count_reg[16].CLK
+clk => count_reg[17].CLK
+clk => count_reg[18].CLK
+clk => count_reg[19].CLK
+clk => count_reg[20].CLK
+clk => count_reg[21].CLK
+clk => count_reg[22].CLK
+clk => count_reg[23].CLK
+clk => count_reg[24].CLK
+clk => count_reg[25].CLK
+out <= out_1hz.DB_MAX_OUTPUT_PORT_TYPE
+
+
