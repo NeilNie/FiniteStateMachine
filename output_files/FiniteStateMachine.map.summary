@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Nov 11 11:42:46 2018
+Analysis & Synthesis Status : Successful - Mon Nov 12 09:30:33 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FiniteStateMachine
 Top-level Entity Name : FiniteStateMachine
 Family : Cyclone IV E
-Total logic elements : 35
-    Total combinational functions : 35
+Total logic elements : 42
+    Total combinational functions : 42
     Dedicated logic registers : 27
 Total registers : 27
-Total pins : 20
+Total pins : 21
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

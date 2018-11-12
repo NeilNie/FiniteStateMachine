@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FiniteStateMachine
-Sun Nov 11 11:42:46 2018
+Mon Nov 12 09:30:33 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 11 11:42:46 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 12 09:30:33 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FiniteStateMachine                          ;
 ; Top-level Entity Name              ; FiniteStateMachine                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 35                                          ;
-;     Total combinational functions  ; 35                                          ;
+; Total logic elements               ; 42                                          ;
+;     Total combinational functions  ; 42                                          ;
 ;     Dedicated logic registers      ; 27                                          ;
 ; Total registers                    ; 27                                          ;
-; Total pins                         ; 20                                          ;
+; Total pins                         ; 21                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,57 +163,79 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; FiniteStateMachine.v             ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v ;         ;
-; clock_1hz.v                      ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/FiniteStateMachine/clock_1hz.v          ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; FiniteStateMachine.v             ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v ;         ;
+; gated_d_latch.v                  ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/SimplePatternDetector/gated_d_latch.v      ;         ;
+; ped_flip_flop.v                  ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/SimplePatternDetector/ped_flip_flop.v      ;         ;
+; clock_1hz.v                      ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/SimplePatternDetector/clock_1hz.v          ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                               ;
-+---------------------------------------------+-----------------------------+
-; Resource                                    ; Usage                       ;
-+---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 35                          ;
-;                                             ;                             ;
-; Total combinational functions               ; 35                          ;
-; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 5                           ;
-;     -- 3 input functions                    ; 3                           ;
-;     -- <=2 input functions                  ; 27                          ;
-;                                             ;                             ;
-; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 10                          ;
-;     -- arithmetic mode                      ; 25                          ;
-;                                             ;                             ;
-; Total registers                             ; 27                          ;
-;     -- Dedicated logic registers            ; 27                          ;
-;     -- I/O registers                        ; 0                           ;
-;                                             ;                             ;
-; I/O pins                                    ; 20                          ;
-;                                             ;                             ;
-; Embedded Multiplier 9-bit elements          ; 0                           ;
-;                                             ;                             ;
-; Maximum fan-out node                        ; clock_1hz:clock|LessThan0~7 ;
-; Maximum fan-out                             ; 27                          ;
-; Total fan-out                               ; 183                         ;
-; Average fan-out                             ; 1.79                        ;
-+---------------------------------------------+-----------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 42             ;
+;                                             ;                ;
+; Total combinational functions               ; 42             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 6              ;
+;     -- 3 input functions                    ; 9              ;
+;     -- <=2 input functions                  ; 27             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 17             ;
+;     -- arithmetic mode                      ; 25             ;
+;                                             ;                ;
+; Total registers                             ; 27             ;
+;     -- Dedicated logic registers            ; 27             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 21             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 207            ;
+; Average fan-out                             ; 1.86           ;
++---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name        ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------------+--------------+
-; |FiniteStateMachine        ; 35 (0)              ; 27 (0)                    ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |FiniteStateMachine                 ; FiniteStateMachine ; work         ;
-;    |clock_1hz:clock|       ; 35 (35)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|clock_1hz:clock ; clock_1hz          ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                       ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name        ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
+; |FiniteStateMachine          ; 42 (3)              ; 27 (0)                    ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |FiniteStateMachine                                         ; FiniteStateMachine ; work         ;
+;    |clock_1hz:clock|         ; 35 (35)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|clock_1hz:clock                         ; clock_1hz          ; work         ;
+;    |ped_flip_flop:fp_1|      ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|ped_flip_flop:fp_1                      ; ped_flip_flop      ; work         ;
+;       |gated_d_latch:latch1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|ped_flip_flop:fp_1|gated_d_latch:latch1 ; gated_d_latch      ; work         ;
+;       |gated_d_latch:latch2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|ped_flip_flop:fp_1|gated_d_latch:latch2 ; gated_d_latch      ; work         ;
+;    |ped_flip_flop:fp_2|      ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|ped_flip_flop:fp_2                      ; ped_flip_flop      ; work         ;
+;       |gated_d_latch:latch1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|ped_flip_flop:fp_2|gated_d_latch:latch1 ; gated_d_latch      ; work         ;
+;       |gated_d_latch:latch2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FiniteStateMachine|ped_flip_flop:fp_2|gated_d_latch:latch2 ; gated_d_latch      ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------+------------------------+
+; ped_flip_flop:fp_1|gated_d_latch:latch2|Q          ; clock_1hz:clock|out_1hz ; yes                    ;
+; ped_flip_flop:fp_2|gated_d_latch:latch2|Q          ; clock_1hz:clock|out_1hz ; yes                    ;
+; ped_flip_flop:fp_1|gated_d_latch:latch1|Q          ; clock_1hz:clock|out_1hz ; yes                    ;
+; ped_flip_flop:fp_2|gated_d_latch:latch1|Q          ; clock_1hz:clock|out_1hz ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                         ;                        ;
++----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -235,22 +258,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
+; boundary_port         ; 21                          ;
 ; cycloneiii_ff         ; 27                          ;
 ;     SCLR              ; 26                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 36                          ;
+; cycloneiii_lcell_comb ; 43                          ;
 ;     arith             ; 25                          ;
 ;         2 data inputs ; 25                          ;
-;     normal            ; 11                          ;
+;     normal            ; 18                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 5                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 6                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.10                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -259,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -269,61 +292,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 11 11:42:28 2018
+    Info: Processing started: Mon Nov 12 09:30:07 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FiniteStateMachine -c FiniteStateMachine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file finitestatemachine.v
-    Info (12023): Found entity 1: FiniteStateMachine File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 4
+    Info (12023): Found entity 1: FiniteStateMachine File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file gated_d_latch.v
-    Info (12023): Found entity 1: gated_d_latch File: C:/Users/USER1/Digital Logic/FiniteStateMachine/gated_d_latch.v Line: 2
+    Info (12023): Found entity 1: gated_d_latch File: C:/Users/USER1/Digital Logic/SimplePatternDetector/gated_d_latch.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ped_flip_flop.v
-    Info (12023): Found entity 1: ped_flip_flop File: C:/Users/USER1/Digital Logic/FiniteStateMachine/ped_flip_flop.v Line: 3
+    Info (12023): Found entity 1: ped_flip_flop File: C:/Users/USER1/Digital Logic/SimplePatternDetector/ped_flip_flop.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file clock_1hz.v
-    Info (12023): Found entity 1: clock_1hz File: C:/Users/USER1/Digital Logic/FiniteStateMachine/clock_1hz.v Line: 2
+    Info (12023): Found entity 1: clock_1hz File: C:/Users/USER1/Digital Logic/SimplePatternDetector/clock_1hz.v Line: 2
 Info (12127): Elaborating entity "FiniteStateMachine" for the top level hierarchy
-Warning (10034): Output port "LEDR[16..0]" at FiniteStateMachine.v(8) has no driver File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-Info (12128): Elaborating entity "clock_1hz" for hierarchy "clock_1hz:clock" File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 15
-Warning (10230): Verilog HDL assignment warning at clock_1hz.v(14): truncated value with size 32 to match size of target (26) File: C:/Users/USER1/Digital Logic/FiniteStateMachine/clock_1hz.v Line: 14
-Warning (12069): Ignored assignment(s) for "KEY[0]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[1]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[2]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[3]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[0]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[1]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[2]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Warning (12069): Ignored assignment(s) for "KEY[3]" because "KEY" is not a bus or array File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
+Warning (10034): Output port "LEDR[16..1]" at FiniteStateMachine.v(8) has no driver File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+Info (12128): Elaborating entity "clock_1hz" for hierarchy "clock_1hz:clock" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 24
+Warning (10230): Verilog HDL assignment warning at clock_1hz.v(14): truncated value with size 32 to match size of target (26) File: C:/Users/USER1/Digital Logic/SimplePatternDetector/clock_1hz.v Line: 14
+Info (12128): Elaborating entity "ped_flip_flop" for hierarchy "ped_flip_flop:fp_1" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 30
+Info (12128): Elaborating entity "gated_d_latch" for hierarchy "ped_flip_flop:fp_1|gated_d_latch:latch1" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/ped_flip_flop.v Line: 14
+Warning (10240): Verilog HDL Always Construct warning at gated_d_latch.v(7): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/SimplePatternDetector/gated_d_latch.v Line: 7
+Info (10041): Inferred latch for "Q" at gated_d_latch.v(8) File: C:/Users/USER1/Digital Logic/SimplePatternDetector/gated_d_latch.v Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY" File: C:/Users/USER1/Digital Logic/FiniteStateMachine/FiniteStateMachine.v Line: 6
-Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 6
+Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 35 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Sun Nov 11 11:42:46 2018
-    Info: Elapsed time: 00:00:18
+    Info (21061): Implemented 42 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Mon Nov 12 09:30:33 2018
+    Info: Elapsed time: 00:00:26
     Info: Total CPU time (on all processors): 00:00:27
 
 

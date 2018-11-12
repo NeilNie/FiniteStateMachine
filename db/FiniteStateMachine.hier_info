@@ -1,6 +1,8 @@
 |FiniteStateMachine
-KEY => ~NO_FANOUT~
-LEDR[0] <= <GND>
+KEY[0] => S0_.IN1
+KEY[0] => S1_.IN1
+KEY[1] => ~NO_FANOUT~
+LEDR[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] <= <GND>
 LEDR[2] <= <GND>
 LEDR[3] <= <GND>
@@ -17,7 +19,7 @@ LEDR[13] <= <GND>
 LEDR[14] <= <GND>
 LEDR[15] <= <GND>
 LEDR[16] <= <GND>
-LEDR[17] <= clock_1hz:clock.out
+LEDR[17] <= out_1hz.DB_MAX_OUTPUT_PORT_TYPE
 CLOCK_50 => CLOCK_50.IN1
 
 
@@ -50,5 +52,41 @@ clk => count_reg[23].CLK
 clk => count_reg[24].CLK
 clk => count_reg[25].CLK
 out <= out_1hz.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FiniteStateMachine|ped_flip_flop:fp_1
+clk => clk.IN1
+D => D.IN1
+Q <= gated_d_latch:latch2.Q
+
+
+|FiniteStateMachine|ped_flip_flop:fp_1|gated_d_latch:latch1
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FiniteStateMachine|ped_flip_flop:fp_1|gated_d_latch:latch2
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FiniteStateMachine|ped_flip_flop:fp_2
+clk => clk.IN1
+D => D.IN1
+Q <= gated_d_latch:latch2.Q
+
+
+|FiniteStateMachine|ped_flip_flop:fp_2|gated_d_latch:latch1
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FiniteStateMachine|ped_flip_flop:fp_2|gated_d_latch:latch2
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
