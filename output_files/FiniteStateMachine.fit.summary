@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Nov 12 09:31:03 2018
+Fitter Status : Successful - Mon Nov 12 10:15:55 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FiniteStateMachine
 Top-level Entity Name : FiniteStateMachine
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 45 / 114,480 ( < 1 % )
+Total logic elements : 44 / 114,480 ( < 1 % )
     Total combinational functions : 42 / 114,480 ( < 1 % )
     Dedicated logic registers : 27 / 114,480 ( < 1 % )
 Total registers : 27

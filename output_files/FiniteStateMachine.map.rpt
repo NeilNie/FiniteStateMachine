@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FiniteStateMachine
-Mon Nov 12 09:30:33 2018
+Mon Nov 12 10:15:31 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 12 09:30:33 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 12 10:15:31 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FiniteStateMachine                          ;
 ; Top-level Entity Name              ; FiniteStateMachine                          ;
@@ -292,7 +292,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 12 09:30:07 2018
+    Info: Processing started: Mon Nov 12 10:15:13 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FiniteStateMachine -c FiniteStateMachine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -306,9 +306,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_1
     Info (12023): Found entity 1: clock_1hz File: C:/Users/USER1/Digital Logic/SimplePatternDetector/clock_1hz.v Line: 2
 Info (12127): Elaborating entity "FiniteStateMachine" for the top level hierarchy
 Warning (10034): Output port "LEDR[16..1]" at FiniteStateMachine.v(8) has no driver File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 8
-Info (12128): Elaborating entity "clock_1hz" for hierarchy "clock_1hz:clock" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 24
+Info (12128): Elaborating entity "clock_1hz" for hierarchy "clock_1hz:clock" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 25
 Warning (10230): Verilog HDL assignment warning at clock_1hz.v(14): truncated value with size 32 to match size of target (26) File: C:/Users/USER1/Digital Logic/SimplePatternDetector/clock_1hz.v Line: 14
-Info (12128): Elaborating entity "ped_flip_flop" for hierarchy "ped_flip_flop:fp_1" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 30
+Info (12128): Elaborating entity "ped_flip_flop" for hierarchy "ped_flip_flop:fp_1" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/FiniteStateMachine.v Line: 31
 Info (12128): Elaborating entity "gated_d_latch" for hierarchy "ped_flip_flop:fp_1|gated_d_latch:latch1" File: C:/Users/USER1/Digital Logic/SimplePatternDetector/ped_flip_flop.v Line: 14
 Warning (10240): Verilog HDL Always Construct warning at gated_d_latch.v(7): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/SimplePatternDetector/gated_d_latch.v Line: 7
 Info (10041): Inferred latch for "Q" at gated_d_latch.v(8) File: C:/Users/USER1/Digital Logic/SimplePatternDetector/gated_d_latch.v Line: 8
@@ -340,8 +340,8 @@ Info (21057): Implemented 63 device resources after synthesis - the final resour
     Info (21061): Implemented 42 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
     Info: Peak virtual memory: 4768 megabytes
-    Info: Processing ended: Mon Nov 12 09:30:33 2018
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Processing ended: Mon Nov 12 10:15:31 2018
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:28
 
 
